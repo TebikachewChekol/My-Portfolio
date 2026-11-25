@@ -1,0 +1,2136 @@
+
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background: #f5f7fb;
+    color: #263247;
+    line-height: 1.7;
+}
+
+/* =================================
+   2. NAVIGATION
+================================= */
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #101d35;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00c6ff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00c6ff;
+}
+
+/* =================================
+   3. HOME / HERO SECTION
+================================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background: linear-gradient(
+        135deg,
+        #101d35,
+        #174b72
+    );
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.welcome {
+    color: #00c6ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #00c6ff;
+}
+
+.hero h3 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #dce9f5;
+}
+
+.hero p {
+    font-size: 17px;
+    max-width: 650px;
+    color: #dce9f5;
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: #00c6ff;
+    color: #101d35;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =================================
+   4. GENERAL SECTION DESIGN
+================================= */
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    color: #101d35;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #00c6ff;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+/* About paragraph */
+
+#about p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+    color: #536176;
+}
+
+/* =================================
+   5. SKILLS SECTION
+================================= */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skill {
+    background: #101d35;
+    color: #ffffff;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #00a9df;
+    transform: translateY(-4px);
+}
+
+/* =================================
+   6. EDUCATION, PROJECTS
+      AND ACHIEVEMENTS
+================================= */
+
+.project-card {
+    background: #ffffff;
+    padding: 30px;
+    margin: 22px auto;
+    max-width: 750px;
+    border-radius: 10px;
+    border-left: 5px solid #00c6ff;
+    box-shadow: 0 5px 20px rgba(16, 29, 53, 0.07);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 29, 53, 0.12);
+}
+
+.project-card h3 {
+    color: #101d35;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #536176;
+    font-size: 16px;
+}
+
+/* =================================
+   7. CONTACT SECTION
+================================= */
+
+#contact {
+    background: #eaf2f8;
+}
+
+#contact p {
+    margin: 12px 0;
+    font-size: 17px;
+}
+
+#contact a {
+    color: #087ca5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* =================================
+   8. FOOTER
+================================= */
+
+footer {
+    background: #101d35;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* =================================
+   9. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h3 {
+        font-size: 17px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* HERO SECTION */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+}
+
+/* HERO TEXT - LEFT SIDE */
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+/* PROFILE PHOTO - RIGHT SIDE */
+.hero-image {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    border: 3px solid #00c6ff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 50%;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #00c6ff;
+}
+
+.btn-outline:hover {
+    background: #00c6ff;
+    color: #101d35;
+}
+/* TABLET AND MOBILE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* FINAL HERO POSITION FIX */
+.hero {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 35px !important;
+}
+
+.hero-content {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.hero-buttons {
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 15px;
+}
+
+.hero-image {
+    width: 170px !important;
+    height: 170px !important;
+    flex: 0 0 170px !important;
+    margin: 0 !important;
+}
+
+.hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
+
+/* Only stack on small phones */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .hero-content {
+        text-align: center !important;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
+    }
+
+    .hero-image {
+        width: 140px !important;
+        height: 140px !important;
+        flex: 0 0 140px !important;
+    }
+}
+/* ABOUT SECTION */
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #526176;
+    margin-bottom: 18px;
+}
+
+/* SKILLS SECTION */
+.skills-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #526176;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
+    border: 1px solid #e8edf4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(16, 29, 53, 0.12);
+}
+
+.skill-card h3 {
+    color: #101d35;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #edf7fc;
+    color: #174b72;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* SKILLS RESPONSIVENESS */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* EDUCATION SECTION */
+.education-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #526176;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.education-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.education-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.education-icon {
+    font-size: 32px;
+    background: #edf7fc;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.education-details {
+    flex: 1;
+}
+
+.education-label {
+    color: #009dcc;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.education-card h3 {
+    color: #101d35;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.education-card h4 {
+    color: #174b72;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.education-card p {
+    color: #526176;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cgpa {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 14px;
+    background: #edf7fc;
+    color: #174b72;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.cgpa strong {
+    color: #009dcc;
+    font-size: 17px;
+}
+
+/* EDUCATION RESPONSIVENESS */
+@media (max-width: 768px) {
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PROJECTS SECTION */
+.projects-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #526176;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.project-card {
+    position: relative;
+    background: #ffffff;
+    padding: 30px;
+    margin: 0;
+    max-width: none;
+    border-radius: 12px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(16, 29, 53, 0.12);
+}
+
+.project-number {
+    color: #dcecf5;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-category {
+    display: inline-block;
+    color: #009dcc;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    color: #101d35;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.project-card p {
+    color: #526176;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.project-tech span {
+    background: #edf7fc;
+    color: #174b72;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* PROJECTS RESPONSIVENESS */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ACHIEVEMENTS SECTION */
+.achievements-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #526176;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.achievements-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.achievement-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(16, 29, 53, 0.12);
+}
+
+.achievement-icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.achievement-label {
+    color: #009dcc;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+
+.achievement-card h3 {
+    color: #101d35;
+    font-size: 20px;
+    margin: 14px 0;
+}
+
+.achievement-card p {
+    color: #526176;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.achievement-award {
+    display: inline-block;
+    background: #edf7fc;
+    color: #174b72;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ACHIEVEMENTS RESPONSIVENESS */
+@media (max-width: 768px) {
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CONTACT SECTION */
+.contact-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #526176;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.contact-container {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    color: #101d35;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: #526176;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    color: #009dcc;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-button {
+    margin-top: 10px;
+}
+
+/* CONTACT RESPONSIVENESS */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PROFESSIONAL FOOTER */
+.footer {
+    background: #101d35;
+    color: #ffffff;
+    padding: 55px 8% 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h2 {
+    color: #00b4d8;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.footer h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.footer-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-navigation li {
+    margin-bottom: 12px;
+}
+
+.footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #00b4d8;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* INDIVIDUAL SECTION BACKGROUNDS */
+
+/* About Section */
+#about {
+    background-color: #F1F7FC;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #FFFFFF;
+}
+
+/* Education Section */
+#education {
+    background-color: #EAF4FA;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #F8FAFC;
+}
+
+/* Achievements Section */
+#achievements {
+    background-color: #EAF7F7;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #FFF7ED;
+}
+
+
+/* ==================================
+   CREATIVE PORTFOLIO COLOR THEME
+================================== */
+
+/* ABOUT */
+#about {
+    background: #E8F4FF;
+    color: #17345C;
+}
+
+#about .about-content p {
+    color: #405A78;
+}
+
+/* SKILLS */
+#skills {
+    background: #F2EAFE;
+    color: #39245F;
+}
+
+#skills .skill-card {
+    background: #FFFFFF;
+    border: 1px solid #DCCCF8;
+}
+
+#skills .skill-card h3 {
+    color: #39245F;
+}
+
+#skills .skill {
+    background: #E8DDFC;
+    color: #59359A;
+}
+
+/* EDUCATION */
+#education {
+    background: #E3F8F1;
+    color: #174B3A;
+}
+
+/* PROJECTS */
+#projects {
+    background: #FFF0E5;
+    color: #63351F;
+}
+
+/* ACHIEVEMENTS */
+#achievements {
+    background: #FFF7D9;
+    color: #5B4514;
+}
+
+/* CONTACT */
+#contact {
+    background: #FCE8F1;
+    color: #642747;
+}
+
+#contact .contact-card {
+    background: #FFFFFF;
+    border: 1px solid #F2C9DC;
+}
+
+#contact .contact-card h3 {
+    color: #642747;
+}
+
+/* COMMON CARD EFFECT */
+.skill-card,
+.project-card,
+.contact-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(16, 29, 53, 0.12);
+}
+
+/* =====================================
+   CREATIVE COLORFUL PORTFOLIO CARDS
+===================================== */
+
+/* EDUCATION CARDS */
+#education .education-card {
+    background: #FFFFFF;
+    border: 1px solid #A8E6CF;
+    border-left: 5px solid #10A879;
+    color: #174B3A;
+}
+
+/* PROJECT CARDS */
+#projects .project-card {
+    background: #FFFFFF;
+    border: 1px solid #FFD0AD;
+    border-top: 5px solid #F08A42;
+    color: #63351F;
+}
+
+#projects .project-card h3 {
+    color: #9A4E20;
+}
+
+/* PROJECT TAGS */
+#projects .project-tag {
+    background: #FFE2CC;
+    color: #87451F;
+}
+
+/* ACHIEVEMENT CARDS */
+#achievements .achievement-card {
+    background: #FFFFFF;
+    border: 1px solid #F1D47A;
+    border-top: 5px solid #D6A51D;
+    color: #5B4514;
+}
+
+#achievements .achievement-card h3 {
+    color: #8B6914;
+}
+
+/* SKILL CARDS */
+#skills .skill-card {
+    background: #FFFFFF;
+    border: 1px solid #DCCCF8;
+    border-top: 5px solid #8B5CF6;
+    color: #39245F;
+}
+
+#skills .skill-card h3 {
+    color: #59359A;
+}
+
+#skills .skill {
+    background: #E8DDFC;
+    color: #59359A;
+}
+
+/* CONTACT CARDS */
+#contact .contact-card {
+    background: #FFFFFF;
+    border: 1px solid #F2C9DC;
+    border-top: 5px solid #D94F91;
+    color: #642747;
+}
+
+#contact .contact-card h3 {
+    color: #9B3268;
+}
+
+/* CARD HOVER EFFECT */
+.skill-card,
+.project-card,
+.contact-card,
+.education-card,
+.achievement-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover,
+.education-card:hover,
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(16, 29, 53, 0.12);
+}
+
+/* ACTIVE NAVIGATION LINK */
+
+nav a.active {
+    color: #00B4D8;
+    font-weight: 700;
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #00B4D8;
+    border-radius: 5px;
+}
+
+/* ===================================
+   SCROLL REVEAL ANIMATIONS
+=================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s ease,
+                transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ===================================
+   MOBILE NAVIGATION MENU
+=================================== */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #00B4D8;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Mobile screen */
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 15px;
+        background: #101D35;
+        border-top: 1px solid #334155;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #FFFFFF;
+        font-size: 16px;
+    }
+
+}
+
+/* Contact Form Styling */
+
+.contact-form-container {
+    max-width: 700px;
+    width: 90%;
+    margin: 50px auto 20px;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.contact-form-container h3 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 25px;
+}
+
+.contact-form-container > p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+#contact-form .contact-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 14px;
+}
+
+#form-status {
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .contact-form-container {
+        width: 95%;
+        padding: 22px 16px;
+        margin-top: 35px;
+    }
+
+    .contact-form-container h3 {
+        font-size: 21px;
+    }
+}
+/* ===================================
+   NEW PORTFOLIO SECTION COLORS
+=================================== */
+
+#about {
+    background-color: #F1F5F9;
+}
+
+#skills {
+    background-color: #F5F0FF;
+}
+
+#education {
+    background-color: #ECF8F2;
+}
+
+#projects {
+    background-color: #FFF3E9;
+}
+
+#achievements {
+    background-color: #FFFBEA;
+}
+
+#contact {
+    background-color: #FCEFF5;
+}
+/* ===================================
+   COLORFUL CARD BACKGROUNDS
+=================================== */
+
+.about-content {
+    background-color: #DCEAFF;
+}
+
+.skill-card {
+    background-color: #E4D9FF;
+}
+
+.education-card {
+    background-color: #D4F0E5;
+}
+
+.project-card {
+    background-color: #FFE3CC;
+}
+
+.achievement-card {
+    background-color: #F5E7B7;
+}
+
+.contact-card {
+    background-color: #F4D9E8;
+}
+/* ===================================
+   SECTION CONTENT & CARD COLORS
+=================================== */
+
+/* About - content container (not a card) */
+#about .about-content {
+    background-color: #DCEAFF !important;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+/* Skills cards */
+#skills .skill-card {
+    background-color: #E4D9FF !important;
+}
+
+/* Education cards */
+#education .education-card {
+    background-color: #D4F0E5 !important;
+}
+
+/* Project cards */
+#projects .project-card {
+    background-color: #FFE3CC !important;
+}
+
+/* Achievement cards */
+#achievements .achievement-card {
+    background-color: #F5E7B7 !important;
+}
+
+/* =========================================
+   PROFESSIONAL 4-CARD CONTACT LAYOUT
+========================================= */
+
+/* Contact Cards + Message Form */
+#contact .contact-card,
+#contact .contact-form-container {
+    background-color: #F4D9E8 !important;
+    border: 2px solid #D99ABC;
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(100, 39, 71, 0.08);
+    box-sizing: border-box;
+}
+
+/* Message Form - Fourth Contact Card */
+#contact .contact-form-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Form Heading */
+#contact .contact-form-container h3 {
+    font-size: 20px;
+    color: #101D35;
+    margin-bottom: 10px;
+}
+
+/* Form Description */
+#contact .contact-form-container p {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Form Groups */
+#contact .contact-form-container .form-group {
+    margin-bottom: 12px;
+}
+
+/* Labels */
+#contact .contact-form-container label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #101D35;
+    margin-bottom: 6px;
+}
+
+/* Input & Textarea */
+#contact .contact-form-container input,
+#contact .contact-form-container textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #D99ABC;
+    border-radius: 8px;
+    background: #FFFFFF;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Focus Effect */
+#contact .contact-form-container input:focus,
+#contact .contact-form-container textarea:focus {
+    border-color: #101D35;
+    box-shadow: 0 0 0 2px rgba(16, 29, 53, 0.08);
+}
+
+/* Message Box */
+#contact .contact-form-container textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Send Button */
+#contact .contact-form-container .contact-button {
+    width: 100%;
+    padding: 12px;
+    background: #101D35;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+#contact .contact-form-container .contact-button:hover {
+    background: #1ab8d8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustment */
+@media (max-width: 600px) {
+    #contact .contact-form-container {
+        padding: 18px;
+    }
+}
+
+/* VIDEO PORTFOLIO DESIGN */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 280px));
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.video-card {
+    background: #E4D9FF;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.video-card video,
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    height: auto;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background: #101D35;
+}
+
+.video-card video {
+    object-fit: contain;
+}
+
+.video-card h3 {
+    margin-top: 15px;
+    color: #101D35;
+}
+
+.video-card p {
+    color: #475569;
+    line-height: 1.6;
+}
+/* VIDEO GALLERY */
+#videos .video-gallery {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* VIDEO CARDS */
+#videos .video-card {
+    width: 180px !important;
+    max-width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+/* SMALL TIKTOK VIDEO */
+#videos .video-card video {
+    display: block;
+    width: 150px !important;
+    height: 220px !important;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #101D35;
+}
+
+/* YOUTUBE HORIZONTAL VIDEO */
+#videos .video-card iframe {
+    display: block;
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    border-radius: 10px;
+    background: #101D35;
+}
+/* ===================================
+   COMPACT 4TH CONTACT CARD
+=================================== */
+
+#contact .contact-form-container {
+    padding: 18px !important;
+}
+
+/* Reduce heading space */
+#contact .contact-form-container h3 {
+    margin-bottom: 5px !important;
+    font-size: 18px !important;
+}
+
+/* Shorten description */
+#contact .contact-form-container p {
+    margin-bottom: 10px !important;
+    font-size: 13px !important;
+}
+
+/* Reduce space between form fields */
+#contact .contact-form-container .form-group {
+    margin-bottom: 8px !important;
+}
+
+/* Compact labels */
+#contact .contact-form-container label {
+    margin-bottom: 4px !important;
+    font-size: 12px !important;
+}
+
+/* Shorter input fields */
+#contact .contact-form-container input {
+    padding: 8px 10px !important;
+    height: 38px !important;
+    font-size: 13px !important;
+}
+
+/* Shorter message area */
+#contact .contact-form-container textarea {
+    padding: 8px 10px !important;
+    min-height: 65px !important;
+    height: 65px !important;
+    font-size: 13px !important;
+}
+
+/* Compact send button */
+#contact .contact-form-container .contact-button {
+    padding: 10px !important;
+    font-size: 14px !important;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+    #contact .contact-form-container {
+        padding: 15px !important;
+    }
+}
+/* ===================================
+   MINI MESSAGE CONTACT CARD
+=================================== */
+
+#contact .contact-form-container {
+    padding: 12px !important;
+    max-width: 100% !important;
+}
+
+/* Compact Heading */
+#contact .contact-form-container h3 {
+    font-size: 16px !important;
+    margin: 0 0 5px !important;
+}
+
+/* Compact Description */
+#contact .contact-form-container p {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    margin: 0 0 6px !important;
+}
+
+/* Tight Form Spacing */
+#contact .contact-form-container .form-group {
+    margin-bottom: 5px !important;
+}
+
+/* Small Labels */
+#contact .contact-form-container label {
+    font-size: 11px !important;
+    margin-bottom: 2px !important;
+}
+
+/* Tiny Inputs */
+#contact .contact-form-container input {
+    height: 30px !important;
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+}
+
+/* Tiny Message Box */
+#contact .contact-form-container textarea {
+    height: 45px !important;
+    min-height: 45px !important;
+    padding: 5px 8px !important;
+    font-size: 11px !important;
+}
+
+/* Small Button */
+#contact .contact-form-container .contact-button {
+    padding: 7px !important;
+    font-size: 12px !important;
+    margin-top: 3px !important;
+}
+/* Slightly Smaller Message Card */
+#contact .contact-form-container {
+    padding: 9px !important;
+}
+
+#contact .contact-form-container h3 {
+    font-size: 14px !important;
+    margin-bottom: 3px !important;
+}
+
+#contact .contact-form-container p {
+    font-size: 10px !important;
+    margin-bottom: 4px !important;
+}
+
+#contact .contact-form-container .form-group {
+    margin-bottom: 3px !important;
+}
+
+#contact .contact-form-container label {
+    font-size: 10px !important;
+    margin-bottom: 2px !important;
+}
+
+#contact .contact-form-container input {
+    height: 27px !important;
+    padding: 3px 7px !important;
+    font-size: 10px !important;
+}
+
+#contact .contact-form-container textarea {
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 4px 7px !important;
+    font-size: 10px !important;
+}
+
+#contact .contact-form-container .contact-button {
+    padding: 6px !important;
+    font-size: 11px !important;
+}
+/* =====================================
+   PROJECT SCREENSHOTS GALLERY
+===================================== */
+
+#screenshots .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* SCREENSHOT CARD */
+
+#screenshots .screenshot-card {
+    background: #FFE3CC;
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* CARD HOVER */
+
+#screenshots .screenshot-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(16, 29, 53, 0.15);
+}
+
+/* SCREENSHOT IMAGE */
+
+#screenshots .screenshot-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #101D35;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+/* IMAGE ZOOM ON HOVER */
+
+#screenshots .screenshot-card:hover img {
+    transform: scale(1.03);
+}
+
+/* CARD TITLE */
+
+#screenshots .screenshot-card h3 {
+    color: #101D35;
+    font-size: 18px;
+    margin: 18px 0 10px;
+}
+
+/* CARD DESCRIPTION */
+
+#screenshots .screenshot-card p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 992px) {
+    #screenshots .screenshot-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    #screenshots .screenshot-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    #screenshots .screenshot-card {
+        padding: 12px;
+    }
+
+    #screenshots .screenshot-card img {
+        height: 210px;
+    }
+
+    #screenshots .screenshot-card h3 {
+        font-size: 17px;
+    }
+}
+/* ===================================
+   SCREENSHOT LIGHTBOX
+=================================== */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #ff9b42;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+/* UNIVERSITY CERTIFICATE - FULL CARD WIDTH */
+
+#achievements .certificate-gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 18px auto 0;
+}
+
+#achievements .certificate-image {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    box-sizing: border-box;
+    padding: 5px;
+    background: white;
+    border: 1px solid #D6C18A;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+/* CERTIFICATE HOVER EFFECT */
+
+#achievements .certificate-image {
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+#achievements .certificate-image:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22);
+}
+/* ===================================
+   PHARMACY CERTIFICATE & AWARDS
+=================================== */
+
+.pharmacy-awards-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    align-items: start;
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+.pharmacy-award-item {
+    min-width: 0;
+    text-align: center;
+}
+
+.pharmacy-certificate-image,
+.pharmacy-award-image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    padding: 5px;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #D6C18A;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.pharmacy-certificate-image:hover,
+.pharmacy-award-image:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
+}
+
+.pharmacy-award-item p {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #101D35;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .pharmacy-awards-gallery {
+        gap: 10px;
+    }
+
+    .pharmacy-certificate-image,
+    .pharmacy-award-image {
+        height: 120px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .pharmacy-awards-gallery {
+        gap: 8px;
+    }
+
+    .pharmacy-certificate-image,
+    .pharmacy-award-image {
+        height: 95px;
+    }
+
+    .pharmacy-award-item p {
+        font-size: 11px;
+    }
+}
+/* REDUCE WHITE SPACE AROUND PHARMACY AWARDS */
+
+.pharmacy-award-image {
+    height: 110px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    object-fit: contain;
+}
+
+/* Keep certificate neat */
+.pharmacy-certificate-image {
+    height: 130px !important;
+    padding: 4px;
+    object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .pharmacy-award-image {
+        height: 85px !important;
+    }
+
+    .pharmacy-certificate-image {
+        height: 100px !important;
+    }
+}
+/* REMOVE EXTRA WHITE FRAME FROM PHARMACY CERTIFICATE */
+
+.pharmacy-certificate-image {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+}
+
+/* Keep medal and trophy styling unchanged */
+.pharmacy-award-image {
+    background: transparent !important;
+}
+
+/* VIDEO GALLERY - FINAL LAYOUT */
+
+#videos .video-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+#videos .video-card {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+    min-height: 340px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+/* TikTok portrait video */
+#videos .video-card video {
+    width: 100% !important;
+    max-width: 200px;
+    height: 240px !important;
+    object-fit: contain;
+    margin: auto;
+}
+
+/* YouTube landscape video */
+#videos .video-card iframe {
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    margin: auto 0;
+}
+
+/* Mobile: keep cards side by side */
+@media (max-width: 600px) {
+    #videos .video-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px;
+    }
+
+    #videos .video-card {
+        min-height: 280px;
+        padding: 8px;
+    }
+
+    #videos .video-card video {
+        height: 190px !important;
+    }
+}
+
+/* Video Samples Section */
+#videos {
+    background-color: #DCEAFF;
+}
+
+/* Project Screenshots Section */
+#screenshots {
+    background-color: #E4D9FF;
+}
+
+
