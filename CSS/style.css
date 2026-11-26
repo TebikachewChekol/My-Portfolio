@@ -89,6 +89,30 @@ header {
     text-align: left;
 }
 
+/* HERO TYPOGRAPHY */
+.hero-content h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-content h3 {
+    font-size: clamp(18px, 2vw, 23px);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    color: #00c6ff;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #e0eaf5;
+}
+
 /* PROFILE PHOTO - RIGHT SIDE */
 .hero-image {
     width: 210px;
