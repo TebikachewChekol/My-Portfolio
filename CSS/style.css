@@ -69,10 +69,6 @@ header {
     color: #00c6ff;
 }
 
-/* =================================
-   
-/* HERO SECTION */
-
 /* HERO SECTION */
 .hero {
     min-height: 85vh;
@@ -445,14 +441,36 @@ footer {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
+    padding: 10px 15px;
 }
 
 .about-content p {
     font-size: 17px;
     line-height: 1.9;
     color: #526176;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+    font-weight: 400;
 }
+
+/* ABOUT SECTION HEADING */
+#about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+    .about-content {
+        padding: 5px 10px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 18px;
+    }
+}
+
 
 /* SKILLS SECTION */
 .skills-intro {
