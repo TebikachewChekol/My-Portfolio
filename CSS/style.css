@@ -562,9 +562,12 @@ footer {
     transition: transform 0.3s ease;
 }
 
+
 .education-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 29, 53, 0.12);
 }
+
 
 .education-icon {
     font-size: 32px;
@@ -594,6 +597,14 @@ footer {
     color: #174b72;
     font-size: 15px;
     margin-bottom: 12px;
+}
+
+.education-year {
+    display: inline-block;
+    color: #16866A;
+    font-size: 14px;
+    font-weight: 600;
+    margin: -5px 0 12px;
 }
 
 .education-card p {
