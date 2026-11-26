@@ -2145,4 +2145,18 @@ nav a.active::after {
     background-color: #E4D9FF;
 }
 
+/* PROJECT ACADEMIC GRADES */
+.project-award {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 15px;
+    background: #FFF4CC;
+    color: #8A6500;
+    border: 1px solid #F0D98C;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
 
