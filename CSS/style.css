@@ -70,75 +70,101 @@ header {
 }
 
 /* =================================
-   3. HOME / HERO SECTION
-================================= */
-
+   
+/* HERO SECTION */
 .hero {
     min-height: 85vh;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 80px 8%;
-    background: linear-gradient(
-        135deg,
-        #101d35,
-        #174b72
-    );
-    color: #ffffff;
+    gap: 40px;
+    padding: 60px 8%;
 }
 
+/* HERO TEXT - LEFT SIDE */
 .hero-content {
-    max-width: 800px;
+    flex: 1;
+    max-width: 700px;
+    text-align: left;
 }
 
-.welcome {
-    color: #00c6ff;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+/* PROFILE PHOTO - RIGHT SIDE */
+.hero-image {
+    width: 210px;
+    height: 210px;
+    flex: 0 0 210px;
+    border: 3px solid #00c6ff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.25);
 }
 
-.hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 18px;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-.hero h1 span {
-    color: #00c6ff;
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.hero h3 {
-    font-size: 21px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #dce9f5;
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #00c6ff;
 }
 
-.hero p {
-    font-size: 17px;
-    max-width: 650px;
-    color: #dce9f5;
-}
-
-/* Button */
-
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 13px 28px;
+.btn-outline:hover {
     background: #00c6ff;
     color: #101d35;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 6px;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #ffffff;
-    transform: translateY(-3px);
+/* TABLET AND MOBILE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 6%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 170px;
+        height: 170px;
+        flex-basis: 170px;
+    }
 }
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-image {
+        width: 150px;
+        height: 150px;
+        flex-basis: 150px;
+    }
+}
+
 
 /* =================================
    4. GENERAL SECTION DESIGN
@@ -337,101 +363,6 @@ footer {
         padding: 22px;
     }
 
-}
-
-
-/* HERO SECTION */
-.hero {
-    min-height: 85vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    padding: 60px 8%;
-}
-
-/* HERO TEXT - LEFT SIDE */
-.hero-content {
-    flex: 1;
-    max-width: 700px;
-    text-align: left;
-}
-
-/* PROFILE PHOTO - RIGHT SIDE */
-.hero-image {
-    width: 210px;
-    height: 210px;
-    flex: 0 0 210px;
-    border: 3px solid #00c6ff;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 198, 255, 0.25);
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/* BUTTONS */
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.btn-outline {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid #00c6ff;
-}
-
-.btn-outline:hover {
-    background: #00c6ff;
-    color: #101d35;
-}
-
-/* TABLET AND MOBILE */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 50px 6%;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-image {
-        width: 170px;
-        height: 170px;
-        flex-basis: 170px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 40px 5%;
-    }
-
-    .hero-image {
-        width: 150px;
-        height: 150px;
-        flex-basis: 150px;
-    }
 }
 
 /* ABOUT SECTION */
