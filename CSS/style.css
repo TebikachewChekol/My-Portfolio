@@ -2158,5 +2158,29 @@ nav a.active::after {
     font-weight: 700;
     line-height: 1.7;
 }
+/* ACHIEVEMENTS - FINAL REFINEMENTS */
+
+#achievements .achievement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#achievements .achievement-card p {
+    line-height: 1.9;
+}
+
+#achievements .achievement-award {
+    margin-top: auto;
+    margin-bottom: 15px;
+    background: #FFF0BD;
+    color: #805F10;
+    border: 1px solid #E8CC75;
+    line-height: 1.7;
+}
+
+#achievements .achievement-card h3 {
+    line-height: 1.4;
+}
 
 
