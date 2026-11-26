@@ -472,65 +472,6 @@ footer {
 }
 
 
-/* SKILLS SECTION */
-.skills-intro {
-    max-width: 700px;
-    margin: 0 auto 35px;
-    color: #526176;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.skill-card {
-    background: #ffffff;
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
-    border: 1px solid #e8edf4;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(16, 29, 53, 0.12);
-}
-
-.skill-card h3 {
-    color: #101d35;
-    font-size: 19px;
-    margin-bottom: 20px;
-}
-
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill {
-    background: #edf7fc;
-    color: #174b72;
-    padding: 9px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* SKILLS RESPONSIVENESS */
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* EDUCATION SECTION */
 .education-intro {
@@ -635,6 +576,79 @@ footer {
     }
 }
 
+/* SKILLS SECTION */
+.skills-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #526176;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    align-items: stretch;
+}
+
+
+
+.skill-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(16, 29, 53, 0.07);
+    border: 1px solid #DCCCF8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(16, 29, 53, 0.12);
+}
+
+.skill-card h3 {
+    color: #101d35;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.skill {
+    background: #E8DDFC;
+    color: #59359A;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.skill:hover {
+    background: #59359A;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* SKILLS RESPONSIVENESS */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* PROJECTS SECTION */
 .projects-intro {
     max-width: 700px;
