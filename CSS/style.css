@@ -141,15 +141,41 @@ header {
     display: block;
 }
 
-/* BUTTONS */
+
+/* HERO BUTTONS */
 .hero-buttons {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 25px;
 }
 
+.hero-buttons a {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+    background: #00c6ff;
+    color: #101d35;
+    border: 2px solid #00c6ff;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: #00c6ff;
+    transform: translateY(-3px);
+}
+
+/* OUTLINE BUTTON */
 .btn-outline {
     background: transparent;
     color: #ffffff;
@@ -159,7 +185,23 @@ header {
 .btn-outline:hover {
     background: #00c6ff;
     color: #101d35;
+    transform: translateY(-3px);
 }
+
+/* MOBILE BUTTONS */
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons a {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+}
+
 
 /* TABLET AND MOBILE */
 @media (max-width: 768px) {
