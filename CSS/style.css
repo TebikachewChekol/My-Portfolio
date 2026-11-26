@@ -72,6 +72,8 @@ header {
 /* =================================
    
 /* HERO SECTION */
+
+/* HERO SECTION */
 .hero {
     min-height: 85vh;
     display: flex;
@@ -80,7 +82,14 @@ header {
     align-items: center;
     gap: 40px;
     padding: 60px 8%;
+    background: linear-gradient(
+        135deg,
+        #101d35,
+        #174b72
+    );
+    color: #ffffff;
 }
+
 
 /* HERO TEXT - LEFT SIDE */
 .hero-content {
